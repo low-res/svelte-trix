@@ -13,6 +13,7 @@
 		"lint": "prettier --check . && eslint ."
 	},
 	"files": [
+		"src",
 		"dist",
 		"!dist/**/*.test.*",
 		"!dist/**/*.spec.*"
