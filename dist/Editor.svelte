@@ -295,56 +295,58 @@
 	};
 
 	const _onChange = (e: Event) => {
-		value = e?.target?.value;
-		if (onChange) {
-			onChange(e?.target?.value);
+		if (e.target === el) {
+			value = e?.target?.value;
+			if (onChange) {
+				onChange(e?.target?.value);
+			}
 		}
 	};
 
 	const _onPaste = (e: Event) => {
-		if (onPaste) {
+		if (e.target === el && onPaste) {
 			onPaste(e);
 		}
 	};
 
 	const _onAttachmentAdd = (e: Event) => {
-		if (onAttachmentAdd) {
+		if (e.target === el && onAttachmentAdd) {
 			onAttachmentAdd(e);
 		}
 	};
 
 	const _onAttachmentRemove = (e: Event) => {
-		if (onAttachmentRemove) {
+		if (e.target === el && onAttachmentRemove) {
 			onAttachmentRemove(e);
 		}
 	};
 
 	const _onFileAccept = (e: Event) => {
-		if (onFileAccept) {
+		if (e.target === el && onFileAccept) {
 			onFileAccept(e);
 		}
 	};
 
 	const _onSelectionChange = (e: Event) => {
-		if (onSelectionChange) {
+		if (e.target === el && onSelectionChange) {
 			onSelectionChange(e);
 		}
 	};
 
 	const _onFocus = (e: Event) => {
-		if (onFocus) {
+		if (e.target === el && onFocus) {
 			onFocus(e);
 		}
 	};
 
 	const _onBlur = (e: Event) => {
-		if (onBlur) {
+		if (e.target === el && onBlur) {
 			onBlur(e);
 		}
 	};
 
 	const _onActionInvoke = (e: Event) => {
-		if (onActionInvoke) {
+		if (e.target === el && onActionInvoke) {
 			onActionInvoke(e);
 		}
 	};
